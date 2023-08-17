@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@700&display=swap");
 * {
   font-family: "Playfair Display", serif;
 }
@@ -50,8 +50,8 @@ h4 {
   font-size: 18px;
 }
 nav {
-  width: calc(100vw - 2 * 200px);
-  padding: 28px 200px;
+  width: calc(100% - 320px * 2);
+  padding: 28px 320px;
 
   position: fixed;
   top: 0;
@@ -73,6 +73,10 @@ nav > ul {
 }
 nav > ul > li {
   cursor: pointer;
+  color: var(--color-grey);
+}
+nav > ul > li:hover {
+  color: var(--color-white);
 }
 header {
   background-color: var(--color-primary);
@@ -103,6 +107,7 @@ header {
 .header_img {
 }
 .header_img > img {
+  width: 100%;
   max-width: 734px;
   max-height: 492px;
   position: absolute;
@@ -138,6 +143,7 @@ section.info {
   position: relative;
 }
 .info_group-right > img {
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
@@ -241,6 +247,7 @@ section.info {
 .outro_text > button {
   padding: 8px 32px;
   border: none;
+  cursor: pointer;
   background: var(--color-primary);
   color: var(--color-white);
   font-size: var(--size-18);
@@ -250,6 +257,7 @@ footer {
   color: var(--color-white);
   padding: 40px 320px;
   display: flex;
+  position: relative;
 }
 .footer_logo {
   height: 52px;
@@ -259,8 +267,18 @@ footer {
 }
 .footer_social {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   margin: 36px 0 24px;
+}
+.footer_social-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: #6c7d8c;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer_column:last-child {
   display: flex;
@@ -293,7 +311,7 @@ footer {
   outline: none;
   width: 60%;
   min-height: 60%;
-  display: flex;
+  display: none;
   gap: 48px;
   padding: 55px 64px;
 }
